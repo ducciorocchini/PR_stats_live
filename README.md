@@ -28,3 +28,17 @@ The following languages will be used:
 > The course will e available online and on demand
 
 > The course will be available for one month
+
+## Example of code
+With the following code, we can attain the following image:
+
+``` r
+png("nameoftheimage.png")
+plot(b2)
+dev.off()
+```
+
+<img src="Pics/mygraph.png" width="100%" />
+
+
+
