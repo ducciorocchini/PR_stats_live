@@ -64,3 +64,4 @@ perc2006 <- c(45,55)
 
 finalt <- data.frame(cover, perc1992, perc2006)
 
+
