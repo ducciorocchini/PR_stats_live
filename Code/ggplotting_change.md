@@ -54,6 +54,10 @@ p4 <- im.ggplot(mato1992, 1)
 
 The resulting output will be something like:
 
+<img src="../Pics/
+  
+  Pics/rs.png" width="100%" />
+
 <img width="1440" alt="Screenshot 2025-02-19 at 11 23 42" src="https://github.com/user-attachments/assets/c992d98b-a2f3-44de-bf8e-560c327ffc0f" />
 
 
