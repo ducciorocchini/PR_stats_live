@@ -5,6 +5,8 @@ library(imageRy)
 library(ggplot2)
 library(viridis)
 library(patchwork)
+library(rasterdiv)
+
 im.list()
 
 
@@ -85,4 +87,54 @@ p6 <- im.ggplot(var7)
 (p1 | p2) /
 (p3 | p4) /
 (p5 | p6) 
+
+# Shannon index: abundance based methods
+shan3 <- Shannon(nir, window=3)
+
+p7 <- im.ggplot(shan3)
+
+p1 + p7
+
+# Speeding up calculation
+ext <- c(0, 100, 0, 100)
+cropnir <- crop(nir, ext)
+p8 <- im.ggplot(cropnir)
+p9 <- im.ggplot(nir)
+p9 + p8
+shan3 <- Shannon(cropnir, window=3)
+
+p10 <- im.ggplot(shan3)
+p7 + p10
+
+# Second way
+# Example of resampling
+r <- rast(nrows=3, ncols=3, xmin=0, xmax=10, ymin=0, ymax=10)
+values(r) <- 1:ncell(r)
+s <- rast(nrows=25, ncols=30, xmin=1, xmax=11, ymin=-1, ymax=11)
+x <- resample(r, s, method="bilinear")
+
+niragg <- aggregate(nir, fact=5)
+plot(niragg)
+
+pnir <- im.ggplot(nir)
+pniragg <- im.ggplot(niragg)
+pnir + pniragg
+
+shanagg3 <- Shannon(niragg, window=3)
+pshan <- im.ggplot(shanagg3)
+p7 + pshan
+pniragg + pshan
+
+# Shannon is a point descriptor, hence: Renyi
+ren3 <- Renyi(niragg, window=3, alpah=seq(0,12,4), na.tolerance=0.2, np=1)
+renstack <- c(ren3[[1]], ren3[[2]], ren3[[3]], ren3[[4]])
+plot(renstack)
+
+ren3 <- Renyi(niragg, window=3, alpha=seq(0,12,4), na.tolerance=0.2, np=1)
+renstack <- c(ren3[[1]], ren3[[2]], ren3[[3]], ren3[[4]])
+plot(renstack)
+
+names(renstack) <- c("alpha=0","alpha=4","alpha=8","alpha=12")
+plot(renstack)
+
 
