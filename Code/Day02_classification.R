@@ -2,6 +2,8 @@
 
 library(terra)
 library(imageRy)
+library(ggplot2) # package needed for the final graph (histograms)
+library(patchwork) # package needed to couple graphs
 
 setwd("~/Desktop")
 arctic <- rast("ellesmere_oli_2014172_lrg.jpg")
@@ -63,5 +65,35 @@ perc1992 <- c(83,17)
 perc2006 <- c(45,55)
 
 finalt <- data.frame(cover, perc1992, perc2006)
+
+p1 <- ggplot(finalt, aes(x=cover, y=perc1992, color=cover)) +
+  geom_bar(stat="identity", fill="white") +
+  ylim(c(0,100))
+
+p2 <- ggplot(finalt, aes(x=cover, y=perc2006, color=cover)) +
+  geom_bar(stat="identity", fill="white") +
+  ylim(c(0,100))
+
+p1 + p2
+
+p1 / p2
+
+(p1 | p2 | p1) /
+      p2
+
+# ggplot2
+im.list()
+
+mato <- im.import("matogrosso_ast_2006209_lrg.jpg")
+mato1992 <- im.import("matogrosso_l5_1992219_lrg.jpg")
+
+p3 <- im.ggplot(mato, 1)
+p4 <- im.ggplot(mato1992, 1)
+
+(p1 | p2 | p1) /
+      p3
+
+(p4 | p1) /
+(p3 | p2)
 
 
