@@ -96,4 +96,21 @@ p4 <- im.ggplot(mato1992, 1)
 (p4 | p1) /
 (p3 | p2)
 
+# Solar Orbiter 
+sun <- im.import("Solar_Orbiter_s_first_views_of_the_Sun_pillars.jpg")
+sunc <- im.classify(sun, num_clusters=3, seed=4)
+suncs <- subst(sunc, c(1,2,3), c("Low energy","Medium energy","High energy"))
 
+fs <- freq(suncs)
+ps <- fs$count*100 / ncell(suncs)
+
+energy <- c("Low","Medium","High")
+percentage <- ps
+finalt <- data.frame(energy, ps)
+
+p5 <- ggplot(finalt, aes(x=energy, y=percentage, color=energy)) +
+  geom_bar(stat="identity", fill="white") 
+
+p6 <- im.ggplot(sun, 1)
+
+p6 / p5
