@@ -2,6 +2,8 @@
 
 library(terra)
 library(imageRy)
+library(ggplot2)
+library(patchwork)
 
 im.list()
 
@@ -62,4 +64,11 @@ pcmapdoim <- im.pca(sentdo, n_components=4, n_samples=1000)
 # calculating variability
 varpca <- focal(pcmapim[[1]], matrix(1/9,3,3), fun=sd)
 
+# seeing the difference with the nir calculation
+varnir <- focal(sent[[1]], matrix(1/9,3,3), fun=sd)
+
+p1 <- im.ggplot(varpca)
+p2 <- im.ggplot(varnir)
+
+p1 + p2
 
