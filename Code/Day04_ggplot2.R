@@ -55,7 +55,7 @@ p2 + p7 + p9
 
 p10 <- ggRGB(mato2006, r=1, g=2, b=3, stretch="log")
 
-# ggRGB will plot RGB layers instead of single bands
+# ggRGB() will plot RGB layers instead of single bands
 # The argument stretch is used to stretch images. The lin stretch is the same of that of im.ploRGB from imageRy
 
 p1 <- ggRGB(mato1992, r=1, g=2, b=3, stretch="lin")
