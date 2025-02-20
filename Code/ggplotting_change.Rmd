@@ -3,7 +3,7 @@
 ## Single layers
 Once a dataframe has been built with thwe following code:
 
-``` {r echo=FALSE}
+``` r
 library(terra)
 library(imageRy)
 library(ggplot2)
