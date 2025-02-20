@@ -1,5 +1,6 @@
-# Using ggplot2 to show change in time
+# Using ggplot2 to show satellite images (and graphs) and their change space and time
 
+## Single layers
 Once a dataframe has been built with thwe following code:
 
 ``` r
@@ -55,6 +56,28 @@ p4 <- im.ggplot(mato1992, 1)
 The resulting output will be something like:
 
 <img src="../Pics/sun.png" />
+
+## RGB spaces
+
+gRGB() will plot RGB layers instead of single bands
+
+``` r
+p1 <- ggRGB(mato1992, r=1, g=2, b=3, stretch="lin")
+p2 <- ggRGB(mato2006, r=1, g=2, b=3, stretch="lin")
+p3 <- ggRGB(mato1992, r=2, g=1, b=3, stretch="lin")
+p4 <- ggRGB(mato2006, r=2, g=1, b=3, stretch="lin")
+p5 <- ggRGB(mato1992, r=2, g=3, b=1, stretch="lin")
+p6 <- ggRGB(mato2006, r=2, g=3, b=1, stretch="lin")
+```
+
+The patchwork package will then join all the graphs:
+``` r
+p1 + p2 + p3 + p4 + p5 + p6
+```
+
+<img src="../Pics/ggRGB.png" />
+
+> Note: The argument stretch is used to stretch images. The lin stretch is the same of that of im.ploRGB from imageRy
 
 
 
