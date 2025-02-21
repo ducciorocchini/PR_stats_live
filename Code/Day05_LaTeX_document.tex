@@ -1,0 +1,513 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{hyperref}
+\usepackage{natbib}
+
+% for markdown:
+\usepackage{markdown}
+\usepackage{tcolorbox}
+\usepackage{etoolbox}
+\pretocmd{\markdown}{\begin{tcolorbox}[colframe=green!25,
+colback=green!10]}{}{}
+\def\endmarkdown{\end{tcolorbox}}
+
+% authors and affiliations:
+\usepackage{authblk}
+\renewcommand\Authfont{\fontsize{14}{14.4}\selectfont}
+\renewcommand\Affilfont{\fontsize{10}{10.8}\itshape}
+
+\title{PR-Stats 2025 - My first LaTeX file}
+\author[1]{Duccio Rocchini}
+% \date{}
+\affil[1]{Alma Mater Studiorum University of Bologna}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\begin{abstract}
+    Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Living is easy with eyes closed
+Misunderstanding all you see
+It's getting hard to be someone, but it all works out
+It doesn't matter much to me
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+No one I think is in my tree
+I mean, it must be high or low
+That is, you can't, you know, tune in, but it's alright
+That is, I think it's not too bad
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Always, no sometimes, think it's me
+But you know, I know when it's a dream
+I think I know, I mean a yes
+But it's all wrong
+That is, I think I disagree
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Strawberry fields forever
+Strawberry fields forever. 
+\end{abstract}
+
+\section{Introduction}
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Living is easy with eyes closed
+Misunderstanding all you see
+It's getting hard to be someone, but it all works out
+It doesn't matter much to me
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+No one I think is in my tree
+I mean, it must be high or low
+That is, you can't, you know, tune in, but it's alright
+That is, I think it's not too bad
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Always, no sometimes, think it's me
+But you know, I know when it's a dream
+I think I know, I mean a yes
+But it's all wrong
+That is, I think I disagree
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Strawberry fields forever
+Strawberry fields forever. 
+
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Living is easy with eyes closed
+Misunderstanding all you see
+It's getting hard to be someone, but it all works out
+It doesn't matter much to me
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+No one I think is in my tree
+I mean, it must be high or low
+That is, you can't, you know, tune in, but it's alright
+That is, I think it's not too bad
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Always, no sometimes, think it's me
+But you know, I know when it's a dream
+I think I know, I mean a yes
+But it's all wrong
+That is, I think I disagree
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Strawberry fields forever
+Strawberry fields forever.
+
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Living is easy with eyes closed
+Misunderstanding all you see
+It's getting hard to be someone, but it all works out
+It doesn't matter much to me
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+No one I think is in my tree
+I mean, it must be high or low
+That is, you can't, you know, tune in, but it's alright
+That is, I think it's not too bad
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Always, no sometimes, think it's me
+But you know, I know when it's a dream
+I think I know, I mean a yes
+But it's all wrong
+That is, I think I disagree
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Strawberry fields forever
+Strawberry fields forever.
+
+\section{Methods}
+\subsection{Formulas}
+In this paper we relied on attracting forces based on Equation \ref{eq:simplenewton}.
+
+\begin{equation}
+    F = \sum_{i=1}^N \sqrt{G_i \times \alpha \times \frac{\sqrt{m_1 \times \sqrt{m_2}}}{r^2}}
+\end{equation}
+
+\begin{equation}
+    F = G \times \frac{m_1 \times m_2}{r^2}
+    \label{eq:simplenewton}
+\end{equation}
+
+\subsection{The algorithm}
+The code used for calculating the force was based on:
+\begin{markdown}
+``` r
+    library(terra)
+    x <- rast("force")
+```
+\end{markdown}
+
+\section{Results}
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Living is easy with eyes closed
+Misunderstanding all you see
+It's getting hard to be someone, but it all works out
+It doesn't matter much to me
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+No one I think is in my tree
+I mean, it must be high or low
+That is, you can't, you know, tune in, but it's alright
+That is, I think it's not too bad
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Always, no sometimes, think it's me
+But you know, I know when it's a dream
+I think I know, I mean a yes
+But it's all wrong
+That is, I think I disagree
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Strawberry fields forever
+Strawberry fields forever.
+
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Living is easy with eyes closed
+Misunderstanding all you see
+It's getting hard to be someone, but it all works out
+It doesn't matter much to me
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+No one I think is in my tree
+I mean, it must be high or low
+That is, you can't, you know, tune in, but it's alright
+That is, I think it's not too bad
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Always, no sometimes, think it's me
+But you know, I know when it's a dream
+I think I know, I mean a yes
+But it's all wrong
+That is, I think I disagree
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Strawberry fields forever
+Strawberry fields forever.
+
+The attained graph is provided in Figure \ref{fig:ggplot}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=.5\linewidth]{histograms.png}
+    \caption{Histograms demonstrate blablabla}
+    \label{fig:histograms}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=.9\linewidth]{ggplot.png}
+    \caption{This is a fancy graph from ggplot2.}
+    \label{fig:ggplot}
+\end{figure}
+
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Living is easy with eyes closed
+Misunderstanding all you see
+It's getting hard to be someone, but it all works out
+It doesn't matter much to me
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+No one I think is in my tree
+I mean, it must be high or low
+That is, you can't, you know, tune in, but it's alright
+That is, I think it's not too bad
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Always, no sometimes, think it's me
+But you know, I know when it's a dream
+I think I know, I mean a yes
+But it's all wrong
+That is, I think I disagree
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Strawberry fields forever
+Strawberry fields forever.
+
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Living is easy with eyes closed
+Misunderstanding all you see
+It's getting hard to be someone, but it all works out
+It doesn't matter much to me
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+No one I think is in my tree
+I mean, it must be high or low
+That is, you can't, you know, tune in, but it's alright
+That is, I think it's not too bad
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Always, no sometimes, think it's me
+But you know, I know when it's a dream
+I think I know, I mean a yes
+But it's all wrong
+That is, I think I disagree
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Strawberry fields forever
+Strawberry fields forever.
+
+\section{Discussion}
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Living is easy with eyes closed
+Misunderstanding all you see
+It's getting hard to be someone, but it all works out
+It doesn't matter much to me
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+No one I think is in my tree
+I mean, it must be high or low
+That is, you can't, you know, tune in, but it's alright
+That is, I think it's not too bad
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Always, no sometimes, think it's me
+But you know, I know when it's a dream
+I think I know, I mean a yes
+But it's all wrong
+That is, I think I disagree
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Strawberry fields forever
+Strawberry fields forever.
+
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Living is easy with eyes closed
+Misunderstanding all you see
+It's getting hard to be someone, but it all works out
+It doesn't matter much to me
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+No one I think is in my tree
+I mean, it must be high or low
+That is, you can't, you know, tune in, but it's alright
+That is, I think it's not too bad
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Always, no sometimes, think it's me
+But you know, I know when it's a dream
+I think I know, I mean a yes
+But it's all wrong
+That is, I think I disagree
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Strawberry fields forever
+Strawberry fields forever.
+
+
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Living is easy with eyes closed
+Misunderstanding all you see
+It's getting hard to be someone, but it all works out
+It doesn't matter much to me
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+No one I think is in my tree
+I mean, it must be high or low
+That is, you can't, you know, tune in, but it's alright
+That is, I think it's not too bad
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Always, no sometimes, think it's me
+But you know, I know when it's a dream
+I think I know, I mean a yes
+But it's all wrong
+That is, I think I disagree
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Strawberry fields forever
+Strawberry fields forever.
+
+
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Living is easy with eyes closed
+Misunderstanding all you see
+It's getting hard to be someone, but it all works out
+It doesn't matter much to me
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+No one I think is in my tree
+I mean, it must be high or low
+That is, you can't, you know, tune in, but it's alright
+That is, I think it's not too bad
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Always, no sometimes, think it's me
+But you know, I know when it's a dream
+I think I know, I mean a yes
+But it's all wrong
+That is, I think I disagree
+Let me take you down
+'Cause I'm going to strawberry fields
+Nothing is real
+And nothing to get hung about
+Strawberry fields forever
+Strawberry fields forever
+Strawberry fields forever \cite{gillespie}.
+
+\begin{thebibliography}{999}
+    \bibitem[Gullespie et al.(2008)]{gillespie}
+    Gillespie, T. W., Foody, G. M., Rocchini, D., Giorgi, A. P., \& Saatchi, S. (2008). Measuring and modelling biodiversity from space. Progress in physical geography, 32(2), 203-221.
+\end{thebibliography}
+
+\newpage
+
+\end{document}
