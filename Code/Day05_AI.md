@@ -14,15 +14,18 @@ data <- data.frame(
 )
 
 # Plot temperature over time
+
+png("temp.png")
 ggplot(data, aes(x = timestamp, y = temperature)) +
   geom_line() +
   labs(title = "Temperature Change Over Time", x = "Time", y = "Temperature (°C)") +
   theme_minimal()
+dev.off()
 
 # Calculate the rate of change in temperature (difference between consecutive readings)
 data$temperature_change = c(NA, diff(data$temperature))
 
 # View the data with temperature change
 print(data)
-
 ```
+The final output will look like:
