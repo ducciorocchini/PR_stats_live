@@ -29,3 +29,7 @@ data$temperature_change = c(NA, diff(data$temperature))
 print(data)
 ```
 The final output will look like:
+
+<img src="../Pics/temp.png" />
+
+> Note: use AI based on your own brain!
