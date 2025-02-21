@@ -1,0 +1,128 @@
+\documentclass{beamer}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{hyperref}
+
+\usetheme{Frankfurt}
+\usecolortheme{dove}
+
+\title{PR-Stats presentation}
+\author{Duccio Rocchini}
+\date{June 25th 2025}
+
+\institute{Talk held at:\\
+    \bigskip
+    \centering
+    \includegraphics[width=0.5\linewidth]{esa.png}
+           }
+
+\begin{document}
+
+\maketitle
+
+\AtBeginSection[] 
+{
+\begin{frame}{Outline}
+\tableofcontents[currentsection]
+\end{frame}
+}
+
+\section{Introduction}
+
+\begin{frame}{First slide}
+    This is the first slide I am making in LaTeX.
+\end{frame}
+
+\begin{frame}{My second slide}
+    This is the first slide I am making in LaTeX. Let me take you down
+'Cause I'm going to \textbf{strawberry fields}
+Nothing is real
+And nothing to get hung about
+Strawberry \textbf{fields} forever
+Living is easy with eyes closed
+Misunderstanding all you see
+It's getting hard to be someone, but it all works out
+It doesn't matter much to me,
+\end{frame}
+
+\begin{frame}{Itemization}
+    In the following text I will put some items like:
+    \begin{itemize}
+        \item Nothing is real
+        \item Living is easy with eyes closed
+        \item Misunderstanding all you see
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Pausing}
+    In the following text I will put some items like:
+    \begin{itemize}
+        \item Nothing is real
+        \item \pause Living is easy with eyes closed
+        \item \pause Misunderstanding all you see
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Pausing}
+    In the following text I will put some items like:
+    \begin{enumerate}
+        \item Nothing is real
+        \item \pause Living is easy with eyes closed
+        \item \pause Misunderstanding all you see
+    \end{enumerate}
+\end{frame}
+
+\section{Algorithm}
+
+\begin{frame}{The basic formula}
+In this study we made use of the Shannon index:
+    \begin{equation}
+        H = - \sum_{i=1}^N p_i \times \ln p_i
+    \end{equation}
+where $N$=number of classes, $p$=proportion, $i$=$i$th class.
+
+In order to also consider evenness we also applied the Pielou index:
+    \begin{equation}
+        J = \frac{H}{H_{max}}
+    \end{equation}
+\tiny{Note: For the code, check my GitHub account here: \url{https://github.com/ducciorocchini/PR_stats/blob/main/Code/Day5_LaTeX_presentation.tex}}
+\end{frame}
+
+\begin{frame}{Code}
+For this study we made use of the cblindplot package with the following function:\\
+\bigskip
+\texttt{cblind.plot(image, cvd='protanopia')} \\
+\bigskip
+This would allow colorblind people to look at colors in maps.
+\end{frame}
+
+\section{Final achievements}
+\begin{frame}{Putting images}
+        \centering
+        \includegraphics[width=.9\linewidth]{fancy.png}
+\end{frame}
+
+\begin{frame}{Putting images}
+        \centering
+        \includegraphics[width=.4\linewidth]{fancy.png}
+        \includegraphics[width=.4\linewidth]{fancy.png}  
+\end{frame}
+
+\begin{frame}{Putting images}
+        \centering
+        \includegraphics[width=.4\linewidth]{fancy.png}
+        \includegraphics[width=.4\linewidth]{fancy.png}\\  
+        \includegraphics[width=.4\linewidth]{fancy.png}
+        \includegraphics[width=.4\linewidth]{fancy.png}  
+\end{frame}
+
+\section{Conclusion}
+\begin{frame}{Coda}
+Concluding remarks:
+    \begin{itemize}
+        \item Nothing is real. Nothing is real. Nothing is real. Nothing is real. Nothing is real.
+        \item \pause Living is easy with eyes closed. Nothing is real. Nothing is real. Nothing is real. Nothing is real.
+        \item \pause Misunderstanding all you see. Nothing is real. Nothing is real. Nothing is real. Nothing is real. Nothing is real.
+    \end{itemize}
+\end{frame}
+
+\end{document}
