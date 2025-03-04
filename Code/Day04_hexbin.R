@@ -44,9 +44,19 @@ plot(hb)
 ggplot(data.frame(x = rnorm(10000), y=rnorm(10000)), aes(x=x, y=y)) +
   geom_hex() + coord_fixed()
 
+setwd("~/Desktop")
+pdf("hex.pdf")
 ggplot(data.frame(x=may[[1]], y=aug[[1]]), aes(x=x, y=y)) + 
   geom_hex() +
   scale_fill_viridis()
+dev.off()
+
+setwd("~/Desktop")
+jpeg("hex.jpg")
+ggplot(data.frame(x=may[[1]], y=aug[[1]]), aes(x=x, y=y)) + 
+  geom_hex() +
+  scale_fill_viridis()
+dev.off()
 
 ggplot(data.frame(x=may[[1]], y=aug[[1]]), aes(x=x, y=y)) + 
   geom_hex() +
